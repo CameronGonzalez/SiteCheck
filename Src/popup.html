@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      body {
+        min-width:250px;
+        max-width:250px;
+      }
+      button.accordion {
+        background-color: #eee;
+        color: #444;
+        cursor: pointer;
+        padding: 10px;
+        width: 100%;
+        text-align: left;
+        border: none;
+        outline: none;
+        transition: 0.4s;
+      }
+      div.panel {
+        padding: 5px;
+        display: none;
+      }
+    </style>
+    <script src="popup.js"></script>
+  </head>
+  <body bgcolor="ghostWhite">
+    <div id="securityStatus">
+      <img id="statusImg" src="icon.png" alt="statusIcon" style="width:25px;height:25px;margin-right:10px;margin-bottom:10px;float:left;">
+      <div><b>Overall Status:</b></div>
+      <center><div id="status"></div></center>
+    </div>
+    <button class="accordion"><b>More Information:</b></button>
+    <div class="panel">
+      <div id="otherDetails">
+        <hr>
+        <div><b>Security Summary:</b></div>
+        <div id="securityDetails">
+          <center><div id=loading></div></center>
+          <div><p id="summary"></p></div>
+          <div><p id="malware"></p></div> 
+          <div><p id="compromised"></p></div>
+          <div><p id="lastUpdate"></p></div>
+        </div>
+        <hr>
+        <div><b>Security Rating System:</b></div>
+	<div>
+          <img src="check1.png" alt="Safe" style="width:25px;height:25px;margin-right:10px;float:left;">
+          <p><b>Safe:</b> Very few or no safety threats found. Browse in confidence.</p>
+        </div>
+        <div>
+          <img src="check2.png" alt="Caution" style="width:25px;height:25px;margin-right:10px;float:left;">
+          <p><b>Possibly Un-safe:</b> Minor safety threats found. Browse with caution.</p>
+        </div>
+        <div>
+          <img src="check3.png" alt="Dangerous" style="width:25px;height:25px;margin-right:10px;float:left;">
+          <p><b>Dangerous!:</b> Serious safety threats found. Proceed at your own risk.</p>
+        </div>
+        <div>
+          <img src="check4.png" alt="NoInfo" style="width:25px;height:25px;margin-right:10px;float:left;">
+          <p><b>Information Unavailable:</b> Web-page has not been or cannot be tested.</p>
+        </div>        
+      </div>
+    </div>
+  </body>
+</html>
